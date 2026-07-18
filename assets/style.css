@@ -1,0 +1,274 @@
+/* =============================================
+   Mini Search Engine — Dominan Hitam / Dark Theme
+   ============================================= */
+
+/* === Global === */
+.stApp {
+    background: #0a0a0a !important;
+    color: #e0e0e0 !important;
+    font-family: 'Inter', 'Segoe UI', sans-serif !important;
+}
+
+/* Hide Streamlit default elements */
+header[data-testid="stHeader"] {
+    background: #0a0a0a !important;
+}
+footer { display: none !important; }
+#MainMenu { display: none !important; }
+
+/* === Header Banner === */
+.header-banner {
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 16px;
+    padding: 44px 36px 32px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.header-banner h1 {
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    margin: 0 0 8px !important;
+    letter-spacing: -0.5px;
+}
+.header-banner p {
+    color: #888 !important;
+    font-size: 1rem;
+    margin: 0;
+}
+.header-banner .badge {
+    display: inline-block;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    padding: 5px 14px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    color: #777;
+    margin-top: 14px;
+}
+
+/* === Stat Cards === */
+.stat-card {
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 22px 16px;
+    text-align: center;
+}
+.stat-card .stat-icon { font-size: 24px; margin-bottom: 6px; }
+.stat-card .stat-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+.stat-card .stat-label {
+    font-size: 11px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-top: 4px;
+}
+
+/* === Section Titles === */
+.section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #e0e0e0;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* === Tabs === */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 0;
+    background: transparent;
+    border-bottom: 1px solid #222;
+}
+.stTabs [data-baseweb="tab"] {
+    border-radius: 0 !important;
+    color: #666 !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    padding: 10px 20px !important;
+    border-bottom: 2px solid transparent !important;
+    transition: color 0.2s ease !important;
+}
+.stTabs [data-baseweb="tab"]:hover {
+    color: #ccc !important;
+    background: transparent !important;
+}
+.stTabs [aria-selected="true"] {
+    color: #fff !important;
+    border-bottom: 2px solid #fff !important;
+    background: transparent !important;
+}
+.stTabs [data-baseweb="tab-highlight"] { display: none !important; }
+.stTabs [data-baseweb="tab-border"] { display: none !important; }
+
+/* === Search Input === */
+.stTextInput > div > div > input {
+    height: 48px !important;
+    font-size: 15px !important;
+    padding: 0 18px !important;
+    border-radius: 8px !important;
+    border: 1px solid #333 !important;
+    background: #141414 !important;
+    color: #e0e0e0 !important;
+    transition: border-color 0.2s ease !important;
+}
+.stTextInput > div > div > input:focus {
+    border-color: #555 !important;
+    box-shadow: none !important;
+}
+.stTextInput > div > div > input::placeholder {
+    color: #555 !important;
+}
+
+/* === Buttons === */
+.stButton > button,
+.stFormSubmitButton > button {
+    background: #fff !important;
+    color: #0a0a0a !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 10px 24px !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    transition: opacity 0.2s ease !important;
+    box-shadow: none !important;
+}
+.stButton > button:hover,
+.stFormSubmitButton > button:hover {
+    opacity: 0.85 !important;
+    background: #fff !important;
+}
+
+/* === Result Cards === */
+.result-card {
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 10px;
+    transition: border-color 0.2s ease;
+}
+.result-card:hover {
+    border-color: #444;
+}
+.result-card.high { border-left: 3px solid #4ade80; }
+.result-card.medium { border-left: 3px solid #facc15; }
+.result-card.low { border-left: 3px solid #f87171; }
+
+/* Rank badges */
+.rank-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 13px;
+    margin-right: 14px;
+    flex-shrink: 0;
+}
+.rank-badge.gold { background: #facc15; color: #0a0a0a; }
+.rank-badge.silver { background: #555; color: #fff; }
+.rank-badge.bronze { background: #333; color: #999; }
+
+/* Score bar */
+.score-bar {
+    height: 3px;
+    border-radius: 2px;
+    background: #222;
+    margin-top: 10px;
+}
+.score-bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.6s ease;
+}
+.score-bar-fill.high { background: #4ade80; }
+.score-bar-fill.medium { background: #facc15; }
+.score-bar-fill.low { background: #f87171; }
+
+/* Step pill */
+.step-pill {
+    display: inline-block;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 2px 10px;
+    font-size: 12px;
+    color: #999;
+}
+
+/* === Metric Cards (Evaluasi) === */
+.metric-card {
+    border-radius: 12px;
+    padding: 24px 18px;
+    text-align: center;
+    border: 1px solid #222;
+    background: #141414;
+}
+.metric-card .value {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 8px 0 4px;
+}
+.metric-card .label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666;
+    font-weight: 600;
+}
+.metric-precision .value { color: #4ade80; }
+.metric-recall .value { color: #60a5fa; }
+.metric-f1 .value { color: #facc15; }
+
+/* === Expanders === */
+.streamlit-expanderHeader {
+    background: #141414 !important;
+    border: 1px solid #222 !important;
+    border-radius: 8px !important;
+    color: #ccc !important;
+}
+
+/* === File Uploader === */
+[data-testid="stFileUploader"] {
+    background: #141414;
+    border: 1px dashed #333;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+/* === DataFrames === */
+[data-testid="stDataFrame"] {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #222;
+}
+
+/* === Scrollbar === */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+/* === Dividers === */
+hr { border-color: #1a1a1a !important; }
+
+/* === Alerts === */
+.stAlert { border-radius: 8px !important; }
+
+/* === Animations === */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.animate-in {
+    animation: fadeInUp 0.35s ease forwards;
+}
